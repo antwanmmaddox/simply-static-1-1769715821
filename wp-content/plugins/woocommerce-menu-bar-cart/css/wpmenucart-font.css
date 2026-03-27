@@ -1,0 +1,12 @@
+@font-face {
+    font-family:'WPMenuCart';
+    src: url('/wp-content/plugins/woocommerce-menu-bar-cart/font/WPMenuCart.eot');
+    src: url('/wp-content/plugins/woocommerce-menu-bar-cart/font/WPMenuCart.eot#iefix') format('embedded-opentype'),
+         url('/wp-content/plugins/woocommerce-menu-bar-cart/font/WPMenuCart.woff2') format('woff2'),
+         url('/wp-content/plugins/woocommerce-menu-bar-cart/font/WPMenuCart.woff') format('woff'),
+         url('/wp-content/plugins/woocommerce-menu-bar-cart/font/WPMenuCart.ttf') format('truetype'),
+         url('/wp-content/plugins/woocommerce-menu-bar-cart/font/WPMenuCart.svg#WPMenuCart') format('svg');
+    font-weight:normal;
+	font-style:normal;
+	font-display:swap;
+}

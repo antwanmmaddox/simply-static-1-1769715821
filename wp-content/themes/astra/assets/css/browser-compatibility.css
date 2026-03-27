@@ -1,0 +1,622 @@
+/**
+ * Browser Compatibility CSS for Teresa Edwards Website
+ * Handles cross-browser compatibility issues and fallbacks
+ */
+
+/* CSS Grid fallback for older browsers */
+@supports not (display: grid) {
+    .woocommerce ul.products {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -0.5rem;
+    }
+    
+    .woocommerce .products .product {
+        flex: 0 0 calc(50% - 1rem);
+        margin: 0.5rem;
+    }
+    
+    @media (min-width: 48em) {
+        .woocommerce .products .product {
+            flex: 0 0 calc(33.333% - 1rem);
+        }
+    }
+    
+    @media (min-width: 62em) {
+        .woocommerce .products .product {
+            flex: 0 0 calc(25% - 1rem);
+        }
+    }
+    
+    .wp-block-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -0.5rem;
+    }
+    
+    .wp-block-gallery .wp-block-image {
+        flex: 0 0 calc(50% - 1rem);
+        margin: 0.5rem;
+    }
+    
+    @media (min-width: 48em) {
+        .wp-block-gallery .wp-block-image {
+            flex: 0 0 calc(33.333% - 1rem);
+        }
+    }
+}
+
+/* Flexbox fallback for older browsers */
+@supports not (display: flex) {
+    .elementor-row {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+    
+    .elementor-column {
+        display: table-cell;
+        vertical-align: top;
+        padding: 0 1rem;
+    }
+    
+    .main-header-menu ul {
+        display: table;
+        width: 100%;
+    }
+    
+    .main-header-menu li {
+        display: table-cell;
+        text-align: center;
+    }
+}
+
+/* Internet Explorer 11 specific fixes */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    /* Fix flexbox issues in IE11 */
+    .elementor-row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    
+    .elementor-column {
+        -ms-flex: 1;
+        flex: 1;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    }
+    
+    .elementor-col-50 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+    }
+    
+    .elementor-col-33 {
+        -ms-flex: 0 0 33.333%;
+        flex: 0 0 33.333%;
+    }
+    
+    .elementor-col-25 {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+    }
+    
+    /* Fix button alignment in IE11 */
+    .wp-block-button .wp-block-button__link,
+    .elementor-button,
+    .ast-button {
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    
+    /* Fix grid fallback for IE11 */
+    .woocommerce ul.products {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    
+    .woocommerce .products .product {
+        -ms-flex: 0 0 calc(50% - 1rem);
+        flex: 0 0 calc(50% - 1rem);
+    }
+    
+    /* Fix input styling in IE11 */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    input[type="number"],
+    textarea,
+    select {
+        border: 1px solid #ddd;
+        padding: 0.75rem;
+    }
+    
+    /* Fix viewport units in IE11 */
+    .main-header-menu.mobile-menu-open {
+        height: 100vh;
+        height: expression(document.body.clientHeight + "px");
+    }
+}
+
+/* Safari specific fixes */
+@supports (-webkit-appearance: none) {
+    /* Fix input styling in Safari */
+    input[type="search"] {
+        -webkit-appearance: none;
+        border-radius: 4px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="password"],
+    input[type="number"],
+    textarea,
+    select {
+        -webkit-appearance: none;
+        border-radius: 4px;
+    }
+    
+    /* Fix button styling in Safari */
+    .wp-block-button .wp-block-button__link,
+    .elementor-button,
+    .ast-button,
+    button,
+    input[type="submit"],
+    input[type="button"],
+    input[type="reset"] {
+        -webkit-appearance: none;
+        border-radius: 0;
+    }
+    
+    /* Fix sticky positioning in Safari */
+    .site-header {
+        position: -webkit-sticky;
+        position: sticky;
+    }
+    
+    /* Fix backdrop-filter in Safari */
+    .main-header-menu {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+    
+    /* Fix smooth scrolling in Safari */
+    html {
+        -webkit-scroll-behavior: smooth;
+        scroll-behavior: smooth;
+    }
+}
+
+/* Firefox specific fixes */
+@-moz-document url-prefix() {
+    /* Fix button styling in Firefox */
+    .wp-block-button .wp-block-button__link,
+    .elementor-button,
+    .ast-button,
+    button,
+    input[type="submit"],
+    input[type="button"],
+    input[type="reset"] {
+        -moz-appearance: none;
+    }
+    
+    /* Fix input styling in Firefox */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    input[type="number"],
+    textarea,
+    select {
+        -moz-appearance: none;
+    }
+    
+    /* Fix flexbox issues in older Firefox */
+    .elementor-row {
+        display: -moz-flex;
+        display: flex;
+        -moz-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    
+    .elementor-column {
+        -moz-flex: 1;
+        flex: 1;
+    }
+}
+
+/* Edge specific fixes */
+@supports (-ms-ime-align: auto) {
+    /* Fix grid layout in Edge */
+    .woocommerce ul.products {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+    
+    @media (min-width: 30em) {
+        .woocommerce ul.products {
+            -ms-grid-columns: 1fr 1rem 1fr;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    @media (min-width: 48em) {
+        .woocommerce ul.products {
+            -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    
+    @media (min-width: 62em) {
+        .woocommerce ul.products {
+            -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    
+    /* Fix flexbox in Edge */
+    .elementor-row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+
+/* Chrome specific fixes */
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
+    /* Fix input autofill styling in Chrome */
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px white inset !important;
+        -webkit-text-fill-color: #333 !important;
+    }
+    
+    /* Fix scrollbar styling in Chrome */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #c1c1c1;
+        border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: #a8a8a8;
+    }
+    
+    /* Fix placeholder styling in Chrome */
+    ::-webkit-input-placeholder {
+        color: #999;
+        opacity: 1;
+    }
+}
+
+/* Opera specific fixes */
+@media all and (-webkit-min-device-pixel-ratio: 10000), not all and (-webkit-min-device-pixel-ratio: 0) {
+    /* Fix flexbox in Opera */
+    .elementor-row {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    
+    .elementor-column {
+        -webkit-flex: 1;
+        flex: 1;
+    }
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+    /* Fix viewport height on iOS */
+    .main-header-menu.mobile-menu-open {
+        height: 100vh;
+        height: -webkit-fill-available;
+    }
+    
+    /* Fix input zoom on iOS */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    input[type="number"],
+    textarea,
+    select {
+        font-size: 16px;
+        -webkit-appearance: none;
+        border-radius: 0;
+    }
+    
+    /* Fix button styling on iOS */
+    .wp-block-button .wp-block-button__link,
+    .elementor-button,
+    .ast-button,
+    button,
+    input[type="submit"],
+    input[type="button"],
+    input[type="reset"] {
+        -webkit-appearance: none;
+        border-radius: 0;
+        cursor: pointer;
+    }
+    
+    /* Fix sticky header on iOS */
+    .site-header {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Fix overflow scrolling on iOS */
+    .main-header-menu.mobile-menu-open {
+        -webkit-overflow-scrolling: touch;
+        overflow-y: scroll;
+    }
+}
+
+/* Android specific fixes */
+@media screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    /* Fix input styling on Android */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    input[type="number"],
+    textarea,
+    select {
+        font-size: 16px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    
+    /* Fix button touch targets on Android */
+    .wp-block-button .wp-block-button__link,
+    .elementor-button,
+    .ast-button,
+    button,
+    input[type="submit"],
+    input[type="button"],
+    input[type="reset"] {
+        min-height: 48px;
+        min-width: 48px;
+        touch-action: manipulation;
+    }
+}
+
+/* Windows Phone specific fixes */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    /* Fix viewport on Windows Phone */
+    @-ms-viewport {
+        width: device-width;
+    }
+    
+    /* Fix input styling on Windows Phone */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    input[type="number"],
+    textarea,
+    select {
+        border: 1px solid #ddd;
+        padding: 0.75rem;
+        font-size: 16px;
+    }
+}
+
+/* Feature detection fallbacks */
+
+/* CSS Custom Properties fallback */
+@supports not (--css: variables) {
+    :root {
+        /* Fallback values for browsers that don't support CSS custom properties */
+    }
+    
+    .ast-container,
+    .elementor-container {
+        max-width: 1200px;
+    }
+    
+    h1, .entry-content h1 {
+        color: #333;
+    }
+    
+    h2, .entry-content h2 {
+        color: #333;
+    }
+    
+    a {
+        color: #0073aa;
+    }
+    
+    a:hover {
+        color: #005177;
+    }
+}
+
+/* Object-fit fallback */
+@supports not (object-fit: cover) {
+    .woocommerce .products .product img {
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+/* Position sticky fallback */
+@supports not (position: sticky) {
+    .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+    
+    body {
+        padding-top: 80px;
+    }
+}
+
+/* Backdrop-filter fallback */
+@supports not (backdrop-filter: blur(10px)) {
+    .main-header-menu {
+        background: rgba(255, 255, 255, 0.95);
+    }
+}
+
+/* CSS Grid fallback using Flexbox */
+@supports not (display: grid) {
+    .elementor-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -0.75rem;
+    }
+    
+    .elementor-column {
+        flex: 1;
+        margin: 0.75rem;
+        min-width: 0;
+    }
+    
+    .elementor-col-50 {
+        flex: 0 0 calc(50% - 1.5rem);
+    }
+    
+    .elementor-col-33 {
+        flex: 0 0 calc(33.333% - 1.5rem);
+    }
+    
+    .elementor-col-25 {
+        flex: 0 0 calc(25% - 1.5rem);
+    }
+    
+    @media (max-width: 767px) {
+        .elementor-col-50,
+        .elementor-col-33,
+        .elementor-col-25 {
+            flex: 0 0 calc(100% - 1.5rem);
+        }
+    }
+}
+
+/* Intersection Observer fallback */
+.no-js img[data-src] {
+    display: none;
+}
+
+.no-js img[src] {
+    display: block;
+}
+
+/* Print compatibility */
+@media print {
+    /* Ensure compatibility across browsers for printing */
+    * {
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+    
+    .elementor-section {
+        page-break-inside: avoid;
+    }
+    
+    .woocommerce .products .product {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .wp-block-button .wp-block-button__link,
+    .elementor-button,
+    .ast-button,
+    button,
+    input[type="submit"],
+    input[type="button"],
+    input[type="reset"] {
+        border: 2px solid;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    input[type="number"],
+    textarea,
+    select {
+        border: 2px solid;
+    }
+    
+    .woocommerce .products .product {
+        border: 2px solid;
+    }
+}
+
+/* Forced colors mode support (Windows High Contrast) */
+@media (forced-colors: active) {
+    .wp-block-button .wp-block-button__link,
+    .elementor-button,
+    .ast-button,
+    button,
+    input[type="submit"],
+    input[type="button"],
+    input[type="reset"] {
+        forced-color-adjust: none;
+        border: 1px solid ButtonText;
+        background: ButtonFace;
+        color: ButtonText;
+    }
+    
+    .wp-block-button .wp-block-button__link:hover,
+    .elementor-button:hover,
+    .ast-button:hover,
+    button:hover,
+    input[type="submit"]:hover,
+    input[type="button"]:hover,
+    input[type="reset"]:hover {
+        background: Highlight;
+        color: HighlightText;
+    }
+}

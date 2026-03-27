@@ -1,0 +1,722 @@
+/**
+ * Mobile-First Responsive CSS for Teresa Edwards Website
+ * Progressive enhancement from mobile to desktop
+ */
+
+/* CSS Reset for consistent cross-browser behavior */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base mobile styles (320px and up) */
+html {
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+/* Container - Mobile First */
+.ast-container,
+.elementor-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Typography - Mobile First */
+h1, .entry-content h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    font-family: 'DM Serif Display', serif;
+}
+
+h2, .entry-content h2 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+    margin-bottom: 0.875rem;
+    font-weight: 400;
+    font-family: 'DM Serif Display', serif;
+}
+
+h3, .entry-content h3 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+    font-weight: 400;
+    font-family: 'DM Serif Display', serif;
+}
+
+h4, .entry-content h4 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-bottom: 0.625rem;
+    font-weight: 400;
+    font-family: 'DM Serif Display', serif;
+}
+
+h5, .entry-content h5 {
+    font-size: 1.125rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    font-family: 'DM Serif Display', serif;
+}
+
+h6, .entry-content h6 {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    font-family: 'DM Serif Display', serif;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+/* Images - Mobile First */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Buttons - Mobile First */
+.wp-block-button .wp-block-button__link,
+.elementor-button,
+.ast-button,
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    border: 1px solid transparent;
+    border-radius: 0;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-height: 44px; /* Touch target size */
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+/* Forms - Mobile First */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem; /* Prevents zoom on iOS */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-family: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Navigation - Mobile First */
+.main-header-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+    padding: 2rem 1rem;
+    overflow-y: auto;
+}
+
+.main-header-menu.mobile-menu-open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.main-header-menu ul {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+}
+
+.main-header-menu li {
+    margin-bottom: 1rem;
+}
+
+.main-header-menu a {
+    display: block;
+    padding: 1rem;
+    font-size: 1.125rem;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #eee;
+}
+
+.ast-mobile-menu-trigger-minimal {
+    display: block;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    min-width: 44px;
+    min-height: 44px;
+    z-index: 10000;
+    position: relative;
+}
+
+/* Header - Mobile First */
+.site-header {
+    padding: 1rem 0;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.custom-logo-link img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Elementor Sections - Mobile First */
+.elementor-section {
+    padding: 2rem 0;
+    overflow-x: hidden;
+}
+
+.elementor-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.elementor-column {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.elementor-widget {
+    margin-bottom: 1.5rem;
+}
+
+/* WooCommerce - Mobile First */
+.woocommerce ul.products {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.woocommerce .products .product {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.woocommerce .products .product:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.woocommerce .products .product img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.woocommerce .products .product .woocommerce-loop-product__title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.woocommerce .products .product .price {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Cart and Checkout - Mobile First */
+.woocommerce table.cart {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.woocommerce table.cart td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+    font-size: 0.875rem;
+}
+
+.woocommerce table.cart .product-thumbnail {
+    width: 60px;
+}
+
+.woocommerce table.cart .product-thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
+/* Contact Forms - Mobile First */
+.wpcf7-form {
+    max-width: 100%;
+}
+
+.wpcf7-form p {
+    margin-bottom: 1rem;
+}
+
+.wpcf7-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+/* Gallery - Mobile First */
+.wp-block-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.wp-block-gallery .wp-block-image {
+    margin: 0;
+}
+
+/* Video Embeds - Mobile First */
+.wp-block-embed,
+.wp-block-embed__wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.wp-block-embed iframe,
+.wp-block-embed object,
+.wp-block-embed embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Popups - Mobile First */
+.pum-container {
+    padding: 1rem;
+    margin: 1rem;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.pum-content {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+/* Basketball Camp Section - Mobile First */
+.camp-info {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.camp-info h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.camp-info p {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Footer - Mobile First */
+.site-footer {
+    background: #333;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.site-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Accessibility - Mobile First */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 1rem;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    z-index: 999999;
+}
+
+/* Focus styles */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 2px;
+}
+
+/* Small devices (landscape phones, 480px and up) */
+@media (min-width: 30em) {
+    .ast-container,
+    .elementor-container {
+        padding: 0 1.25rem;
+    }
+    
+    h1, .entry-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2, .entry-content h2 {
+        font-size: 2rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+    
+    .wp-block-button .wp-block-button__link,
+    .elementor-button,
+    .ast-button {
+        width: auto;
+        display: inline-flex;
+        margin-right: 0.5rem;
+    }
+    
+    .woocommerce ul.products {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .wp-block-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 48em) {
+    .ast-container,
+    .elementor-container {
+        max-width: 750px;
+        padding: 0 1.5rem;
+    }
+    
+    h1, .entry-content h1 {
+        font-size: 3.5rem;
+    }
+    
+    h2, .entry-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    h3, .entry-content h3 {
+        font-size: 2rem;
+    }
+    
+    .elementor-section {
+        padding: 3rem 0;
+    }
+    
+    .elementor-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .elementor-col-50 {
+        width: calc(50% - 0.75rem);
+    }
+    
+    .elementor-col-33 {
+        width: calc(33.333% - 1rem);
+    }
+    
+    .elementor-col-25 {
+        width: calc(25% - 1.125rem);
+    }
+    
+    .main-header-menu {
+        position: static;
+        display: flex;
+        height: auto;
+        background: none;
+        backdrop-filter: none;
+        padding: 0;
+        overflow: visible;
+    }
+    
+    .main-header-menu ul {
+        display: flex;
+        align-items: center;
+        width: auto;
+    }
+    
+    .main-header-menu li {
+        margin-bottom: 0;
+        margin-right: 2rem;
+    }
+    
+    .main-header-menu a {
+        padding: 0.5rem 0;
+        border-bottom: none;
+        font-size: 1rem;
+    }
+    
+    .ast-mobile-menu-trigger-minimal {
+        display: none;
+    }
+    
+    .woocommerce ul.products {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .wp-block-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .camp-info {
+        padding: 2rem;
+        text-align: left;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 62em) {
+    .ast-container,
+    .elementor-container {
+        max-width: 970px;
+        padding: 0 2rem;
+    }
+    
+    h1, .entry-content h1 {
+        font-size: 4.5rem;
+    }
+    
+    h2, .entry-content h2 {
+        font-size: 3rem;
+    }
+    
+    .elementor-section {
+        padding: 4rem 0;
+    }
+    
+    .woocommerce ul.products {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+    
+    .custom-logo-link img {
+        max-width: 120px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 75em) {
+    .ast-container,
+    .elementor-container {
+        max-width: 1200px;
+        padding: 0 2.5rem;
+    }
+    
+    h1, .entry-content h1 {
+        font-size: 5rem;
+    }
+    
+    h2, .entry-content h2 {
+        font-size: 3rem;
+    }
+    
+    .elementor-section {
+        padding: 5rem 0;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .custom-logo-link img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+    }
+    
+    .site-header {
+        background: #2a2a2a;
+        box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    }
+    
+    .main-header-menu {
+        background: rgba(42, 42, 42, 0.95);
+    }
+    
+    .main-header-menu a {
+        color: #e0e0e0;
+        border-bottom-color: #444;
+    }
+    
+    .woocommerce .products .product {
+        background: #2a2a2a;
+        border-color: #444;
+    }
+    
+    .camp-info {
+        background: #2a2a2a;
+        color: #e0e0e0;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="password"],
+    input[type="search"],
+    input[type="number"],
+    textarea,
+    select {
+        background: #2a2a2a;
+        color: #e0e0e0;
+        border-color: #444;
+    }
+}
+
+/* Print styles */
+@media print {
+    * {
+        background: transparent !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    a, a:visited {
+        text-decoration: underline;
+    }
+    
+    .no-print,
+    .ast-mobile-menu-trigger-minimal,
+    .main-header-menu,
+    .site-footer {
+        display: none !important;
+    }
+    
+    .ast-container,
+    .elementor-container {
+        max-width: none;
+        padding: 0;
+    }
+    
+    .elementor-section {
+        padding: 1rem 0;
+    }
+    
+    h1, .entry-content h1 {
+        font-size: 2rem;
+    }
+    
+    h2, .entry-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    p {
+        font-size: 0.875rem;
+    }
+}
