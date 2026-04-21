@@ -200,6 +200,22 @@ body.elementor-page a:focus-visible {
   filter: brightness(1.04);
 }
 
+.snipcart-cart-summary,
+.snipcart-cart-summary__content,
+.snipcart-cart-summary-item,
+.snipcart-cart-summary-item__name,
+.snipcart-cart-summary-item__quantity,
+.snipcart-cart-summary-item__price,
+.snipcart-summary-fees__item,
+.snipcart-summary-fees__title,
+.snipcart-summary-fees__amount,
+.snipcart-summary-fees__notice,
+.snipcart-cart-summary-fees__footer,
+.snipcart-cart-summary-fees__footer-title,
+.snipcart-cart-summary-fees__footer-amount {
+  color: #000 !important;
+}
+
 .elementor-page img {
   max-width: 100%;
   height: auto;
