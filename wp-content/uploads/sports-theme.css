@@ -601,3 +601,64 @@ body.elementor-page a:focus-visible {
 .elementor-shape.elementor-shape-top {
   display: none !important;
 }
+
+/* Fix Snipcart checkout text colors - override sports theme bleeding into Snipcart UI */
+#snipcart,
+#snipcart *,
+.snipcart-modal,
+.snipcart-modal * {
+  --color-default: #1a1a1a !important;
+  --color-alt: #555555 !important;
+  --color-badge: #1a1a1a !important;
+  --color-badge-active: #1a1a1a !important;
+  color: inherit;
+}
+
+#snipcart .snipcart__font--secondary,
+#snipcart .snipcart__font--std,
+#snipcart p,
+#snipcart span,
+#snipcart label,
+#snipcart h1,
+#snipcart h2,
+#snipcart h3,
+#snipcart h4,
+#snipcart li,
+#snipcart a,
+.snipcart-modal p,
+.snipcart-modal span,
+.snipcart-modal label,
+.snipcart-modal h1,
+.snipcart-modal h2,
+.snipcart-modal h3,
+.snipcart-modal h4,
+.snipcart-modal li,
+.snipcart-modal a {
+  color: #1a1a1a !important;
+  font-family: "Instrument Sans", "Open Sans", sans-serif !important;
+}
+
+#snipcart .snipcart-item-line__title,
+#snipcart .snipcart-cart-header__title,
+#snipcart .snipcart-order__title,
+#snipcart [class*="snipcart-"][class*="__title"],
+#snipcart [class*="snipcart-"][class*="__header"] {
+  color: #1a1a1a !important;
+  font-family: "Instrument Sans", "Open Sans", sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+#snipcart input,
+#snipcart select,
+#snipcart textarea {
+  color: #1a1a1a !important;
+  background: #ffffff !important;
+  border-color: #cccccc !important;
+  border-radius: 8px !important;
+}
+
+#snipcart input::placeholder,
+#snipcart select::placeholder {
+  color: #999999 !important;
+}
