@@ -579,3 +579,20 @@ body.elementor-page a:focus-visible {
     margin-right: 0;
   }
 }
+
+/* Fix Snipcart coupon label truncation */
+.snipcart-discount-box__title,
+.snipcart-discount-box label,
+.snipcart__font--secondary,
+[class*="snipcart-discount"] label,
+[class*="snipcart-discount"] span {
+  overflow: visible !important;
+  white-space: nowrap !important;
+  text-overflow: unset !important;
+  min-width: fit-content !important;
+}
+
+.snipcart-discount-box__form,
+.snipcart-discount-box {
+  overflow: visible !important;
+}
