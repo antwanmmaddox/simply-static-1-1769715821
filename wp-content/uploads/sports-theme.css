@@ -596,3 +596,8 @@ body.elementor-page a:focus-visible {
 .snipcart-discount-box {
   overflow: visible !important;
 }
+
+/* Hide wave shape divider */
+.elementor-shape.elementor-shape-top {
+  display: none !important;
+}
