@@ -200,3 +200,10 @@ html.te-no-scroll, html.te-no-scroll body { overflow: hidden; }
 .single-product .te-qty input, .single-product .te-qty input:focus { color: #fff !important; }
 .single-product .te-msg--info { color: #8a5d00; }
 .single-product .te-opt__values input:checked + label { color: var(--te-ink); }
+
+/* ---------- let the whole drawer scroll so PayPal's card form (and its Pay Now button) is always reachable ---------- */
+.te-cart { overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+.te-cart__header { position: sticky; top: 0; z-index: 2; background: var(--te-panel); }
+.te-cart__body { flex: 0 0 auto; overflow: visible; }
+.te-cart__footer { margin-top: auto; }
+.te-cart__paypal { position: relative; z-index: 1; }
