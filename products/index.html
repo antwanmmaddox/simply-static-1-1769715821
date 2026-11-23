@@ -175,11 +175,6 @@ var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_ur
 var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%&elementor_page_id=2002"};
 </script>
 <script src="/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=8.6.3" id="woocommerce-js" defer data-wp-strategy="defer"></script>
-<script src="https://collect.commerce.godaddy.com/sdk.js" id="poynt-collect-sdk-js"></script>
-<script id="mwc-payments-poynt-payment-form-js-extra">
-var poyntPaymentFormI18n = {"errorMessages":{"genericError":"An error occurred, please try again or try an alternate form of payment.","missingCardDetails":"Missing card details.","missingBillingDetails":"Missing billing details."}};
-</script>
-<script src="/wp-content/mu-plugins/vendor/godaddy/mwc-core/assets/js/payments/frontend/poynt.js" id="mwc-payments-poynt-payment-form-js"></script>
 <script src="/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.19.3" id="font-awesome-4-shim-js"></script>
 <link rel="https://api.w.org/" href="/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/pages/2002"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
 <link rel="canonical" href="/products/">
@@ -230,7 +225,7 @@ overflow-x:hidden;
 }
 
 		</style>
-			<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><link rel="stylesheet" id="sports-theme-css" href="/wp-content/uploads/sports-theme.css?v=1" media="all"></head>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><link rel="stylesheet" id="sports-theme-css" href="/wp-content/uploads/sports-theme.css?v=2" media="all"><link rel="stylesheet" id="te-shop-css" href="/shop/shop.css?v=2" media="all"></head>
 <body data-rsssl="1" class="wp-singular page-template page-template-elementor_canvas page page-id-2002 wp-custom-logo wp-embed-responsive wp-theme-astra theme-astra woocommerce-no-js ast-desktop ast-page-builder-template ast-no-sidebar astra-4.12.1 ast-single-post ast-replace-site-logo-transparent ast-inherit-site-logo-transparent ast-hfb-header ast-full-width-primary-header elementor-default elementor-template-canvas elementor-kit-800 elementor-page elementor-page-2002">
 			<div data-elementor-type="wp-page" data-elementor-id="2002" class="elementor elementor-2002">
 						<section class="elementor-section elementor-top-section elementor-element elementor-element-36628163 elementor-hidden-desktop elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="36628163" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -422,7 +417,7 @@ overflow-x:hidden;
 				<div class="elementor-element elementor-element-107edd0f elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="107edd0f" data-element_type="widget" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-button-wrapper">
-			<a class="elementor-button elementor-size-lg" role="button">
+			<a class="elementor-button elementor-size-lg te-disabled" role="button" aria-disabled="true" tabindex="-1">
 						<span class="elementor-button-content-wrapper">
 						<span class="elementor-button-text">Coming soon</span>
 		</span>
@@ -665,10 +660,6 @@ var wc_order_attribution = {"params":{"lifetime":1.0e-5,"session":30,"ajaxurl":"
 var starter_templates_zip_preview = {"AstColorPaletteVarPrefix":"--ast-global-color-","AstEleColorPaletteVarPrefix":["ast-global-color-0","ast-global-color-1","ast-global-color-2","ast-global-color-3","ast-global-color-4","ast-global-color-5","ast-global-color-6","ast-global-color-7","ast-global-color-8"]};
 </script>
 <script src="/wp-content/plugins/astra-sites/inc/lib/onboarding/assets/dist/template-preview/main.js?ver=09382f635556bec359b3" id="starter-templates-zip-preview-js"></script>
-<script id="ppcp-smart-button-js-extra">
-var PayPalCommerceGateway = {"url":"https:\/\/www.paypal.com\/sdk\/js?client-id=AXBagD9CltmnG_ZtFY2IumJvarQv3KYWv9SzDnsms0efEzxDj_JpetPXsxjJwssD-pA5GKx1Yv0RA3An&currency=USD&integration-date=2024-02-16&components=buttons,funding-eligibility&vault=false&commit=false&intent=capture&disable-funding=card&enable-funding=venmo,paylater","url_params":{"client-id":"AXBagD9CltmnG_ZtFY2IumJvarQv3KYWv9SzDnsms0efEzxDj_JpetPXsxjJwssD-pA5GKx1Yv0RA3An","currency":"USD","integration-date":"2024-02-16","components":"buttons,funding-eligibility","vault":"false","commit":"false","intent":"capture","disable-funding":"card","enable-funding":"venmo,paylater"},"script_attributes":{"data-partner-attribution-id":"Woo_PPCP"},"client_id":"AXBagD9CltmnG_ZtFY2IumJvarQv3KYWv9SzDnsms0efEzxDj_JpetPXsxjJwssD-pA5GKx1Yv0RA3An","currency":"USD","data_client_id":{"set_attribute":false,"endpoint":"\/?wc-ajax=ppc-data-client-id&elementor_page_id=2002","nonce":"b4b5f859c7","user":0,"has_subscriptions":false,"paypal_subscriptions_enabled":false},"redirect":"\/checkout\/","context":"mini-cart","ajax":{"simulate_cart":{"endpoint":"\/?wc-ajax=ppc-simulate-cart&elementor_page_id=2002","nonce":"c14a64eb6c"},"change_cart":{"endpoint":"\/?wc-ajax=ppc-change-cart&elementor_page_id=2002","nonce":"68fc9288fd"},"create_order":{"endpoint":"\/?wc-ajax=ppc-create-order&elementor_page_id=2002","nonce":"1e829ea8d7"},"approve_order":{"endpoint":"\/?wc-ajax=ppc-approve-order&elementor_page_id=2002","nonce":"b1f1e5b387"},"approve_subscription":{"endpoint":"\/?wc-ajax=ppc-approve-subscription&elementor_page_id=2002","nonce":"e8f7e21946"},"vault_paypal":{"endpoint":"\/?wc-ajax=ppc-vault-paypal&elementor_page_id=2002","nonce":"5de871b50c"},"save_checkout_form":{"endpoint":"\/?wc-ajax=ppc-save-checkout-form&elementor_page_id=2002","nonce":"9b27bce081"},"validate_checkout":{"endpoint":"\/?wc-ajax=ppc-validate-checkout&elementor_page_id=2002","nonce":"87ff89f9a6"},"cart_script_params":{"endpoint":"\/?wc-ajax=ppc-cart-script-params&elementor_page_id=2002"}},"cart_contains_subscription":"","subscription_plan_id":"","variable_paypal_subscription_variations":[],"subscription_product_allowed":"","locations_with_subscription_product":{"product":false,"payorder":false,"cart":false},"enforce_vault":"","can_save_vault_token":"","is_free_trial_cart":"","vaulted_paypal_email":"","bn_codes":{"checkout":"Woo_PPCP","cart":"Woo_PPCP","mini-cart":"Woo_PPCP","product":"Woo_PPCP"},"payer":null,"button":{"wrapper":"#ppc-button-ppcp-gateway","is_disabled":false,"mini_cart_wrapper":"#ppc-button-minicart","is_mini_cart_disabled":false,"cancel_wrapper":"#ppcp-cancel","mini_cart_style":{"layout":"vertical","color":"gold","shape":"rect","label":"paypal","tagline":false,"height":35},"style":{"layout":"vertical","color":"gold","shape":"rect","label":"paypal","tagline":false}},"separate_buttons":{"card":{"id":"ppcp-card-button-gateway","wrapper":"#ppc-button-ppcp-card-button-gateway","style":{"shape":"rect","color":"black","layout":"horizontal"}}},"hosted_fields":{"wrapper":"#ppcp-hosted-fields","labels":{"credit_card_number":"","cvv":"","mm_yy":"MM\/YY","fields_empty":"Card payment details are missing. Please fill in all required fields.","fields_not_valid":"Unfortunately, your credit card details are not valid.","card_not_supported":"Unfortunately, we do not support your credit card.","cardholder_name_required":"Cardholder's first and last name are required, please fill the checkout form required fields."},"valid_cards":["mastercard","visa","amex","discover","american-express","master-card"],"contingency":"SCA_WHEN_REQUIRED"},"messages":[],"labels":{"error":{"generic":"Something went wrong. Please try again or choose another payment source.","required":{"generic":"Required form fields are not filled.","field":"%s is a required field.","elements":{"terms":"Please read and accept the terms and conditions to proceed with your order."}}},"billing_field":"Billing %s","shipping_field":"Shipping %s"},"simulate_cart":{"enabled":true,"throttling":5000},"order_id":"0","single_product_buttons_enabled":"1","mini_cart_buttons_enabled":"1","basic_checkout_validation_enabled":"","early_checkout_validation_enabled":"1","funding_sources_without_redirect":["paypal","paylater","venmo","card"],"user":{"is_logged":false}};
-</script>
-<script src="/wp-content/plugins/woocommerce-paypal-payments/modules/ppcp-button/assets/js/button.js?ver=2.5.4" id="ppcp-smart-button-js"></script>
 <script src="/wp-content/plugins/elementskit-lite/libs/framework/assets/js/frontend-script.js?ver=3.7.8" id="elementskit-framework-js-frontend-js"></script>
 <script id="elementskit-framework-js-frontend-js-after">
 		var elementskit = {
@@ -731,10 +722,6 @@ var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"
 <script src="/wp-content/plugins/woocommerce/assets/js/flexslider/jquery.flexslider.min.js?ver=2.7.2-wc.8.6.3" id="flexslider-js" defer data-wp-strategy="defer"></script>
 <script src="/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe.min.js?ver=4.1.1-wc.8.6.3" id="photoswipe-js" defer data-wp-strategy="defer"></script>
 <script src="/wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe-ui-default.min.js?ver=4.1.1-wc.8.6.3" id="photoswipe-ui-default-js" defer data-wp-strategy="defer"></script>
-<script id="wc-add-to-cart-variation-js-extra">
-var wc_add_to_cart_variation_params = {"wc_ajax_url":"\/?wc-ajax=%%endpoint%%&elementor_page_id=2002","i18n_no_matching_variations_text":"Sorry, no products matched your selection. Please choose a different combination.","i18n_make_a_selection_text":"Please select some product options before adding this product to your cart.","i18n_unavailable_text":"Sorry, this product is unavailable. Please choose a different combination."};
-</script>
-<script src="/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart-variation.min.js?ver=8.6.3" id="wc-add-to-cart-variation-js" defer data-wp-strategy="defer"></script>
 <script id="wc-single-product-js-extra">
 var wc_single_product_params = {"i18n_required_rating_text":"Please select a rating","review_rating_required":"yes","flexslider":{"rtl":false,"animation":"slide","smoothHeight":true,"directionNav":false,"controlNav":"thumbnails","slideshow":false,"animationSpeed":500,"animationLoop":false,"allowOneSlide":false},"zoom_enabled":"1","zoom_options":[],"photoswipe_enabled":"1","photoswipe_options":{"shareEl":false,"closeOnScroll":false,"history":false,"hideAnimationDuration":0,"showAnimationDuration":0},"flexslider_enabled":"1"};
 </script>
@@ -743,12 +730,7 @@ var wc_single_product_params = {"i18n_required_rating_text":"Please select a rat
 			/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
 			</script>
 			<!-- WooCommerce JavaScript -->
-<script type="text/javascript">
-jQuery(function($) { 
-window.mwc_payments_poynt_payment_form_handler = new MWCPaymentsPoyntPaymentFormHandler({"appId":"urn:aid:b80b2269-7e0d-4ae4-97c1-9f2c57b80673","businessId":"5d0ec568-6a96-43c9-b4a1-8cd79e73a4de","customerAddress":{"firstName":"","lastName":"","phone":"","email":"","line1":"","line2":"","city":"","state":"CA","country":"US","postcode":""},"shippingAddress":{"line1":"","line2":"","city":"","state":"","country":"","postcode":"","needsShipping":false},"isLoggingEnabled":false,"options":{"iFrame":{"border":"0px","borderRadius":"0px","boxShadow":"none","height":"320px","width":"auto"},"style":{"theme":"checkout"},"displayComponents":{"firstName":false,"lastName":false,"emailAddress":false,"zipCode":false,"labels":true,"submitButton":false},"customCss":{"container":{"margin-top":"10px"},"inputLabel":{"font-size":"16px"}},"enableReCaptcha":true,"reCaptchaOptions":{"type":"TEXT"}}});
- });
-</script>
-		<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),
                 _trfd.push({'tccl.baseHost':'secureserver.net'}),
                 _trfd.push({'ap':'wpaas_v2'},
                     {'server':'2f809d5dc00e'},
@@ -768,5 +750,6 @@ window.mwc_payments_poynt_payment_form_handler = new MWCPaymentsPoyntPaymentForm
             var trafficScript = document.createElement('script'); trafficScript.src = 'https://img1.wsimg.com/signals/js/clients/scc-c2/scc-c2.min.js'; window.document.head.appendChild(trafficScript);</script>
 		<script>window.addEventListener('click', function (elem) { var _elem$target, _elem$target$dataset, _window, _window$_trfq; return (elem === null || elem === void 0 ? void 0 : (_elem$target = elem.target) === null || _elem$target === void 0 ? void 0 : (_elem$target$dataset = _elem$target.dataset) === null || _elem$target$dataset === void 0 ? void 0 : _elem$target$dataset.eid) && ((_window = window) === null || _window === void 0 ? void 0 : (_window$_trfq = _window._trfq) === null || _window$_trfq === void 0 ? void 0 : _window$_trfq.push(["cmdLogEvent", "click", elem.target.dataset.eid]));});</script>
 		<script src='https://img1.wsimg.com/traffic-assets/js/tccl-tti.min.js' onload="window.tti.calculateTTI()"></script>
-			</body>
+			<script src="/shop/shop.js?v=3" defer></script>
+</body>
 </html>

@@ -171,7 +171,7 @@ body.elementor-page a:focus-visible {
 }
 
 .elementor-page .elementor-widget-button .elementor-button,
-.elementor-page button.snipcart-checkout,
+.elementor-page button.te-cart-toggle,
 .elementor-page .woocommerce a.button,
 .elementor-page .woocommerce button.button,
 .elementor-page .woocommerce input.button {
@@ -190,30 +190,14 @@ body.elementor-page a:focus-visible {
 
 .elementor-page .elementor-widget-button .elementor-button:hover,
 .elementor-page .elementor-widget-button .elementor-button:focus-visible,
-.elementor-page button.snipcart-checkout:hover,
-.elementor-page button.snipcart-checkout:focus-visible,
+.elementor-page button.te-cart-toggle:hover,
+.elementor-page button.te-cart-toggle:focus-visible,
 .elementor-page .woocommerce a.button:hover,
 .elementor-page .woocommerce button.button:hover,
 .elementor-page .woocommerce input.button:hover {
   transform: translateY(-2px);
   box-shadow: 0 22px 46px rgba(246, 201, 90, 0.24);
   filter: brightness(1.04);
-}
-
-.snipcart-cart-summary,
-.snipcart-cart-summary__content,
-.snipcart-cart-summary-item,
-.snipcart-cart-summary-item__name,
-.snipcart-cart-summary-item__quantity,
-.snipcart-cart-summary-item__price,
-.snipcart-summary-fees__item,
-.snipcart-summary-fees__title,
-.snipcart-summary-fees__amount,
-.snipcart-summary-fees__notice,
-.snipcart-cart-summary-fees__footer,
-.snipcart-cart-summary-fees__footer-title,
-.snipcart-cart-summary-fees__footer-amount {
-  color: #000 !important;
 }
 
 .elementor-page img {
@@ -522,7 +506,7 @@ body.elementor-page a:focus-visible {
   }
 
   .elementor-page .elementor-top-section:not(.sticky-header):not(.elementor-hidden-desktop):not(.elementor-hidden-tablet):not(.elementor-hidden-mobile) > .elementor-container,
-  .elementor-page .elementor-top-section:not(.sticky-header):not(.elementor-hidden-desktop):not(.elementor-hidden-tablet):not(.elementor-hidden-mobile) > .elementor-background-overlay + .elementor-container {
+.elementor-page .elementor-top-section:not(.sticky-header):not(.elementor-hidden-desktop):not(.elementor-hidden-tablet):not(.elementor-hidden-mobile) > .elementor-background-overlay + .elementor-container {
     padding: 20px;
   }
 }
@@ -537,7 +521,7 @@ body.elementor-page a:focus-visible {
   }
 
   .elementor-page .elementor-top-section:not(.sticky-header):not(.elementor-hidden-desktop):not(.elementor-hidden-tablet):not(.elementor-hidden-mobile) > .elementor-container,
-  .elementor-page .elementor-top-section:not(.sticky-header):not(.elementor-hidden-desktop):not(.elementor-hidden-tablet):not(.elementor-hidden-mobile) > .elementor-background-overlay + .elementor-container {
+.elementor-page .elementor-top-section:not(.sticky-header):not(.elementor-hidden-desktop):not(.elementor-hidden-tablet):not(.elementor-hidden-mobile) > .elementor-background-overlay + .elementor-container {
     padding: 18px 16px;
     border-radius: 22px;
   }
@@ -551,9 +535,10 @@ body.elementor-page a:focus-visible {
   }
 
   .elementor-page .elementor-widget-heading h1.elementor-heading-title,
-  .elementor-page .elementor-widget-heading h2.elementor-heading-title {
-    font-size: clamp(2rem, 12vw, 3.5rem);
+.elementor-page .elementor-widget-heading h2.elementor-heading-title {
+    font-size: clamp(1.9rem, 9.5vw, 3.5rem);
     line-height: 0.96;
+    overflow-wrap: break-word;
   }
 
   .elementor-page .elementor-widget-heading h3.elementor-heading-title {
@@ -561,40 +546,23 @@ body.elementor-page a:focus-visible {
   }
 
   .elementor-page .elementor-widget-button .elementor-button,
-  .elementor-page button.snipcart-checkout {
+.elementor-page button.te-cart-toggle {
     width: 100%;
     justify-content: center;
   }
 
   .elementor-page .elementor-column,
-  .elementor-page .elementor-col-50,
-  .elementor-page .elementor-col-33,
-  .elementor-page .elementor-col-25 {
+.elementor-page .elementor-col-50,
+.elementor-page .elementor-col-33,
+.elementor-page .elementor-col-25 {
     width: 100%;
   }
 
   .elementor-page .woocommerce ul.products[class*="columns-"] li.product,
-  .elementor-page .woocommerce-page ul.products[class*="columns-"] li.product {
+.elementor-page .woocommerce-page ul.products[class*="columns-"] li.product {
     width: 100%;
     margin-right: 0;
   }
-}
-
-/* Fix Snipcart coupon label truncation */
-.snipcart-discount-box__title,
-.snipcart-discount-box label,
-.snipcart__font--secondary,
-[class*="snipcart-discount"] label,
-[class*="snipcart-discount"] span {
-  overflow: visible !important;
-  white-space: nowrap !important;
-  text-overflow: unset !important;
-  min-width: fit-content !important;
-}
-
-.snipcart-discount-box__form,
-.snipcart-discount-box {
-  overflow: visible !important;
 }
 
 /* Hide wave shape divider */
@@ -602,63 +570,3 @@ body.elementor-page a:focus-visible {
   display: none !important;
 }
 
-/* Fix Snipcart checkout text colors - override sports theme bleeding into Snipcart UI */
-#snipcart,
-#snipcart *,
-.snipcart-modal,
-.snipcart-modal * {
-  --color-default: #1a1a1a !important;
-  --color-alt: #555555 !important;
-  --color-badge: #1a1a1a !important;
-  --color-badge-active: #1a1a1a !important;
-  color: inherit;
-}
-
-#snipcart .snipcart__font--secondary,
-#snipcart .snipcart__font--std,
-#snipcart p,
-#snipcart span,
-#snipcart label,
-#snipcart h1,
-#snipcart h2,
-#snipcart h3,
-#snipcart h4,
-#snipcart li,
-#snipcart a,
-.snipcart-modal p,
-.snipcart-modal span,
-.snipcart-modal label,
-.snipcart-modal h1,
-.snipcart-modal h2,
-.snipcart-modal h3,
-.snipcart-modal h4,
-.snipcart-modal li,
-.snipcart-modal a {
-  color: #1a1a1a !important;
-  font-family: "Instrument Sans", "Open Sans", sans-serif !important;
-}
-
-#snipcart .snipcart-item-line__title,
-#snipcart .snipcart-cart-header__title,
-#snipcart .snipcart-order__title,
-#snipcart [class*="snipcart-"][class*="__title"],
-#snipcart [class*="snipcart-"][class*="__header"] {
-  color: #1a1a1a !important;
-  font-family: "Instrument Sans", "Open Sans", sans-serif !important;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-#snipcart input,
-#snipcart select,
-#snipcart textarea {
-  color: #1a1a1a !important;
-  background: #ffffff !important;
-  border-color: #cccccc !important;
-  border-radius: 8px !important;
-}
-
-#snipcart input::placeholder,
-#snipcart select::placeholder {
-  color: #999999 !important;
-}

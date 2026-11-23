@@ -34,12 +34,9 @@ This WordPress-powered website serves as Teresa's official online presence, feat
 - **Essential Addons for Elementor**: Extended Elementor functionality
 - **WP Mail SMTP**: Email delivery optimization
 
-### E-commerce Features
-- **WooCommerce Integration**: Full online store functionality
-- **PayPal Payments**: Secure payment processing
-- **Stripe Integration**: Additional payment gateway
-- **Product Variations**: Support for different product sizes and options
-- **Cart Management**: Advanced shopping cart features
+### E-commerce (PayPal checkout)
+The WordPress/WooCommerce store and Snipcart have been replaced by a custom cart with native PayPal checkout.
+See "Shop & Checkout" below.
 
 ### Performance & Security
 - **Image Optimization**: Automated image compression and optimization
@@ -146,3 +143,33 @@ For technical support or website-related inquiries, the site includes contact fo
 ---
 
 *This README provides a comprehensive overview of the Teresa Edwards official website codebase and its functionality. The site serves as both an inspirational platform and e-commerce destination for one of basketball's greatest athletes.*
+
+## Shop & Checkout
+
+| Piece | File |
+|---|---|
+| Product catalog (prices, options, availability) | `shop/products.json` |
+| Cart drawer, product options, Buy Now, confirmation page logic | `shop/shop.js` |
+| Shop styling | `shop/shop.css` |
+| Order confirmation page | `order-confirmation/index.html` |
+| PayPal server functions | `netlify/functions/paypal-config.js`, `create-order.js`, `capture-order.js` |
+| Shared PayPal/pricing logic | `netlify/lib/paypal.js` |
+
+**How it works:** shoppers pick options and add items to the cart (saved in the browser), or use a product's Buy Now button.
+The PayPal buttons call `create-order`, which re-prices everything from `shop/products.json` on the server, so prices
+can't be changed in the browser. PayPal collects the shipping address and payment (PayPal account or debit/credit card).
+`capture-order` completes the payment and the shopper lands on `/order-confirmation/`. PayPal emails the receipt.
+Orders appear in the PayPal Business account under Activity.
+
+**Common changes (edit `shop/products.json` only):**
+- Change a price: edit `"price"`.
+- Put the shirt on sale: set `"available": true` on `labeled-athletic-shirt`.
+- Add or remove sizes/colors: edit that product's `"options"`.
+- Limit shipping countries: e.g. `"shipToCountries": ["US"]` (empty = anywhere).
+
+**Netlify environment variables:**
+- `PAYPAL_CLIENT_ID` – app Client ID from developer.paypal.com
+- `PAYPAL_CLIENT_SECRET` – app Secret (mark as secret; include the Functions scope)
+- `PAYPAL_ENV` – `sandbox` for testing, `live` for real payments
+
+Use sandbox keys + `PAYPAL_ENV=sandbox` together, or live keys + `PAYPAL_ENV=live` together — never mixed.

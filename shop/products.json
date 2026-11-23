@@ -1,0 +1,35 @@
+{
+  "currency": "USD",
+  "seller": "Dream Faith Productions, LLC",
+  "shippingCost": "0.00",
+  "shipToCountries": [],
+  "maxQuantityPerLine": 25,
+  "products": [
+    {
+      "id": "dream-with-faith-legacy-poetry",
+      "sku": "DWF-BOOK",
+      "name": "Dream with Faith, Legacy Poetry",
+      "description": "Book by 5x Olympian Teresa Edwards",
+      "price": "20.00",
+      "image": "/wp-content/uploads/2022/06/IMG_6029-768x576.jpeg",
+      "url": "/product/dream-with-faith-legacy-poetry-2/",
+      "available": true,
+      "options": []
+    },
+    {
+      "id": "labeled-athletic-shirt",
+      "sku": "LA-5X-SHIRT",
+      "name": "Labeled Athletic 5x Olympian Shirt",
+      "description": "Official Labeled Athletic 5x Olympian shirt",
+      "price": "19.99",
+      "image": "/wp-content/uploads/2021/09/IMG_4952-225x300.jpeg",
+      "url": "/product/labeled-athletic-5x-olympian-shirt/",
+      "available": false,
+      "unavailableLabel": "Coming soon",
+      "options": [
+        { "name": "Size", "values": ["Small", "Medium", "Large", "X-Large"] },
+        { "name": "Color", "values": ["White", "Black"] }
+      ]
+    }
+  ]
+}
