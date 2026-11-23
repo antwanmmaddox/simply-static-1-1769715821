@@ -1,7 +1,50 @@
 [build]
   functions = "netlify/functions"
 
+[functions]
+  node_bundler = "esbuild"
+  # The checkout functions read prices from the same catalog the site uses.
+  included_files = ["shop/products.json"]
+
+# Shop files should always be fresh so price/availability changes show up right away.
 [[headers]]
-  for = "/.netlify/functions/*"
+  for = "/shop/*"
   [headers.values]
-    Access-Control-Allow-Origin = "*"
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/order-confirmation/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
+# Old $1.00 test listing of the book -> the real $20 book page.
+[[redirects]]
+  from = "/product/dream-with-faith-legacy-poetry/"
+  to = "/product/dream-with-faith-legacy-poetry-2/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/product/dream-with-faith-legacy-poetry"
+  to = "/product/dream-with-faith-legacy-poetry-2/"
+  status = 301
+  force = true
+
+# Old WooCommerce pages -> the new cart drawer / home page.
+[[redirects]]
+  from = "/cart/*"
+  to = "/#cart"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/checkout/*"
+  to = "/#cart"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/my-account/*"
+  to = "/"
+  status = 301
+  force = true
