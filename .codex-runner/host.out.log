@@ -13,4 +13,4 @@ info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
 info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
       Executed endpoint 'Fallback {*path:nonfile}'
 info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
-      Request finished HTTP/1.1 GET http://127.0.0.1:8080/ - 200 - text/html;+charset=utf-8 20.1339ms
+      Request finished HTTP/1.1 GET http://127.0.0.1:8080/ - 200 - text/html;+charset=utf-8 148.0739ms
